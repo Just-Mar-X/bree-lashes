@@ -296,12 +296,15 @@ export default function App() {
                 <a href="#book" className="btn-base btn-outline">Book now</a>
               </div>
             </div>
-            <div className="overflow-hidden bg-blush">
+            <div className="overflow-hidden bg-blush shadow-soft">
               <img
-                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80"
-                alt="Briee applying lashes"
+                src="/assets/about-portrait-Di7Jzii4.jpg"
+                alt="Briee — Lashes by Briee, Kilifi & Mombasa"
+                width={1008}
+                height={1200}
                 className="h-full w-full object-cover"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
