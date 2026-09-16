@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Jost", sans-serif;
+
+  --color-background: #fdf8f5;
+  --color-foreground: #2e2a28;
+  --color-muted-foreground: #8d7f7a;
+  --color-border: #ede6e0;
+  --color-input: #ede6e0;
+  --color-ring: #c9a0a0;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #2e2a28;
+
+  --color-primary: #2e2a28;
+  --color-primary-foreground: #fdf8f5;
+
+  --color-secondary: #f8f0eb;
+  --color-secondary-foreground: #2e2a28;
+
+  --color-muted: #f5ece6;
+  --color-muted-foreground: #8d7f7a;
+
+  --color-accent: #e8d5c4;
+  --color-accent-foreground: #2e2a28;
+
+  --color-rose: #b07d7d;
+  --color-rose-foreground: #ffffff;
+
+  --color-sand: #fdf8f5;
+  --color-blush: #fcece6;
+  --color-blush-foreground: #2e2a28;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-foreground);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+  border-color: var(--color-primary);
+}
+.btn-primary:hover {
+  background: #1a1816;
+  border-color: #1a1816;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-foreground);
+  border-color: var(--color-border);
+}
+.btn-outline:hover {
+  background: var(--color-card);
+  border-color: var(--color-foreground);
+}
+
+.shadow-soft {
+  box-shadow: 0 1px 3px rgba(46, 42, 40, 0.06), 0 8px 24px rgba(46, 42, 40, 0.06);
+}
+.shadow-lift {
+  box-shadow: 0 4px 16px rgba(46, 42, 40, 0.08), 0 16px 40px rgba(46, 42, 40, 0.1);
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
